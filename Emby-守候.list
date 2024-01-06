@@ -1,10 +1,2 @@
-# NAME: Emby
-# AUTHOR: justdoiting
-# REPO: https://github.com/justdoiting/emby-rules
-# UPDATED: 2023-12-14 16:58:47
-# DOMAIN: 1
-# DOMAIN-KEYWORD: 3
-# DOMAIN-SUFFIX: 34
-# PROCESS-NAME: 1
-# TOTAL: 39
+
 HOST-SUFFIX,emby.cn2gias.uk,守候影音 
