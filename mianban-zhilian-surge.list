@@ -1,0 +1,26 @@
+# NAME: 信息面板
+
+DOMAIN-SUFFIX,cip.cc,direct
+DOMAIN-SUFFIX,forge.speedtest.cn,direct
+DOMAIN-SUFFIX,rmb.pingan.com.cn,direct
+
+DOMAIN-SUFFIX,api-v3.speedtest.cn,direct
+
+DOMAIN-SUFFIX,ipservice.ws.126.net,direct
+
+DOMAIN-SUFFIX,api.bilibili.com,direct
+
+DOMAIN-SUFFIX,api.live.bilibili.com,direct
+
+DOMAIN-SUFFIX,myip.ipip.net,direct
+
+DOMAIN-SUFFIX,ip.ip233.cn,direct
+
+DOMAIN-SUFFIX,uapi.woobx.cn,direct
+
+DOMAIN-SUFFIX,ip.im,direct
+
+DOMAIN-SUFFIX,ips.market.alicloudapi.com,direct
+
+DOMAIN-SUFFIX,api.ip.plus,direct
+

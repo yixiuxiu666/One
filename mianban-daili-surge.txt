@@ -1,0 +1,14 @@
+# NAME: 信息面板
+
+
+
+DOMAIN-SUFFIX,ipinfo.io,proxy
+
+DOMAIN-SUFFIX,ip-score.com,proxy
+
+DOMAIN-SUFFIX,ipwhois.app,proxy
+
+DOMAIN-SUFFIX,ip-api.com,proxy
+
+DOMAIN-SUFFIX,api-ipv4.ip.sb,proxy
+
