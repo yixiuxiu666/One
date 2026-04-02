@@ -1,13 +1,32 @@
-DOMAIN-SUFFIX,tech26.de
-DOMAIN-SUFFIX,number26.de
+
+# N26 Bank
 DOMAIN-SUFFIX,n26.com
+DOMAIN-SUFFIX,n26.de
+DOMAIN-SUFFIX,number26.de
+DOMAIN-SUFFIX,tech26.de
 DOMAIN,mcgthfrqrs95vdbzkhtchf5fc0g4.device.marketingcloudapis.com
 DOMAIN,aggregator.service.usercentrics.eu
+
+# N26 API
+DOMAIN-SUFFIX,api.n26.com
+DOMAIN-SUFFIX,api.tech26.de
 DOMAIN,api.usercentrics.eu
+
+# N26 CDN
+DOMAIN-SUFFIX,cdn.n26.com
+DOMAIN-SUFFIX,images.n26.com
+
+# N26 Authentication
+DOMAIN-SUFFIX,auth.n26.com
+DOMAIN-SUFFIX,identity.n26.com
 DOMAIN,sdk.fra-02.braze.eu
 DOMAIN,assets.ctfassets.net
+
+# N26 Payment Services
+DOMAIN-SUFFIX,pay.n26.com
+DOMAIN-SUFFIX,transfer.n26.com
+
 DOMAIN,app.adjust.net.in
 DOMAIN,analytics.adjust.com
 DOMAIN,analytics.adjust.io
 DOMAIN,analytics.adjust.de
-
