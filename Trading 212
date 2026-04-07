@@ -1,0 +1,46 @@
+# Trading 212 主域名
+DOMAIN-SUFFIX,trading212.com
+DOMAIN-SUFFIX,trading212.uk
+DOMAIN-SUFFIX,t212.io
+
+# Trading 212 API 接口
+DOMAIN-SUFFIX,api.trading212.com
+DOMAIN-SUFFIX,api.t212.io
+DOMAIN-SUFFIX,docs.trading212.com
+
+# Trading 212 认证登录
+DOMAIN-SUFFIX,auth.trading212.com
+DOMAIN-SUFFIX,login.trading212.com
+DOMAIN-SUFFIX,account.trading212.com
+
+# Trading 212 CDN/静态资源
+DOMAIN-SUFFIX,cdn.trading212.com
+DOMAIN-SUFFIX,static.trading212.com
+DOMAIN-SUFFIX,assets.trading212.com
+
+# Trading 212 WebSocket (实时行情推送)
+DOMAIN-SUFFIX,ws.trading212.com
+DOMAIN-SUFFIX,stream.trading212.com
+DOMAIN-SUFFIX,realtime.trading212.com
+
+# Trading 212 帮助中心和社区
+DOMAIN-SUFFIX,helpcentre.trading212.com
+DOMAIN-SUFFIX,community.trading212.com
+DOMAIN-SUFFIX,support.trading212.com
+
+# Trading 212 移动应用
+DOMAIN-SUFFIX,mobile.trading212.com
+DOMAIN-SUFFIX,app.trading212.com
+
+# Trading 212 图片资源
+DOMAIN-SUFFIX,images.trading212.com
+DOMAIN-SUFFIX,img.trading212.com
+
+# Trading 212 分析和报告
+DOMAIN-SUFFIX,analytics.trading212.com
+DOMAIN-SUFFIX,reports.trading212.com
+
+# Trading 212 支付相关
+DOMAIN-SUFFIX,payments.trading212.com
+DOMAIN-SUFFIX,deposit.trading212.com
+DOMAIN-SUFFIX,withdraw.trading212.com
