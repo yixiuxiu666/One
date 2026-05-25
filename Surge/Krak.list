@@ -1,0 +1,6 @@
+# Krak (Kraken Money App)
+DOMAIN-SUFFIX,krak.app
+# Kraken 基础设施（Krak 登录/认证依赖）
+DOMAIN,id.kraken.com
+DOMAIN,assets-cms.kraken.com
+DOMAIN-SUFFIX,kraken.com
