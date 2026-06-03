@@ -1,0 +1,18 @@
+# WhatsApp / Surge Rule Set
+# 适用于 Surge RULE-SET
+# 建议策略：Proxy / DIRECT 按需在 Surge 配置中指定
+
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,wa.me
+DOMAIN-SUFFIX,whatsappbrand.com
+
+# WhatsApp 常见媒体 / CDN / 连接域名
+DOMAIN-SUFFIX,cdn.whatsapp.net
+DOMAIN-SUFFIX,mmg.whatsapp.net
+DOMAIN-SUFFIX,pps.whatsapp.net
+DOMAIN-SUFFIX,g.whatsapp.net
+DOMAIN-SUFFIX,v.whatsapp.net
+
+# 兜底关键词，避免漏掉动态子域名
+DOMAIN-KEYWORD,whatsapp
