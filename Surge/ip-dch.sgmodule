@@ -6,4 +6,4 @@
 IP 数据中心检测 = script-name=IP 数据中心检测, update-interval=3600
 
 [Script]
-IP 数据中心检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/yixiuxiu666/One/refs/heads/main/Surge/ip-dch-surge.js, argument=POLICY=Proxy
+IP 数据中心检测 = type=Proxy, timeout=30, script-path=https://raw.githubusercontent.com/yixiuxiu666/One/refs/heads/main/Surge/ip-dch-surge.js, argument=POLICY=Proxy
