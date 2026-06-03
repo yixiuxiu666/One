@@ -1,0 +1,9 @@
+#!name=IP 数据中心检测
+#!desc=Surge 原生 Panel：本地/落地 IP、风险评分、GPT/Gemini/YouTube/Netflix/TikTok 解锁检测。可在 Script 参数中修改 POLICY 为你的策略组。
+#!author=7号
+
+[Panel]
+IP 数据中心检测 = script-name=IP 数据中心检测, update-interval=3600
+
+[Script]
+IP 数据中心检测 = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/YOUR_NAME/YOUR_REPO/main/ip-dch-surge.js, argument=POLICY=Proxy
