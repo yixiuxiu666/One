@@ -1,0 +1,37 @@
+# NAME: Bybit EU
+# AUTHOR: ChatGPT
+# UPDATED: 2026-06-12
+# DESCRIPTION: Surge RULE-SET for Bybit EU. Replace policy in your main config, e.g. RULE-SET,https://example.com/bybit-eu-ruleset.list,BYBIT
+
+# Bybit EU main site
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN,www.bybit.eu
+DOMAIN,learn.bybit.eu
+
+# Bybit EU API endpoints
+DOMAIN,api.bybit.eu
+DOMAIN,api1.bybit.eu
+DOMAIN,api2.bybit.eu
+DOMAIN,api3.bybit.eu
+DOMAIN,api4.bybit.eu
+DOMAIN,api5.bybit.eu
+
+# Bybit EU WebSocket endpoints
+DOMAIN,ws.bybit.eu
+DOMAIN,ws1.bybit.eu
+DOMAIN,ws2.bybit.eu
+DOMAIN,stream.bybit.eu
+
+# Bybit global / shared API fallback endpoints
+DOMAIN,api.bybit.com
+DOMAIN,api.bytick.com
+DOMAIN,stream.bybit.com
+DOMAIN,stream.bytick.com
+
+# Bybit static / CDN / app resources, commonly used by web/app login flows
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,bycsi.com
+DOMAIN-SUFFIX,bybdc6.com
+DOMAIN-SUFFIX,bytick.com
+
+DOMAIN-KEYWORD,bybit
