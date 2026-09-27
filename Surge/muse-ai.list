@@ -1,11 +1,11 @@
 # NAME: Muse AI
 # SOURCE: Captured from Chrome and the macOS Muse app via Surge
 # UPDATED: 2026-09-27
-DOMAIN-SUFFIX,muse.ai,Proxy
-DOMAIN,hatch.metaaivm.com,Proxy
-DOMAIN,graph.facebook.com,Proxy
-DOMAIN,meta.graph.meta.com,Proxy
-DOMAIN,hatch-api.meta.ai,Proxy
-DOMAIN,api.meta.ai,Proxy
-DOMAIN,www.multimango.com,Proxy
-DOMAIN,www.facebook.com,Proxy
+DOMAIN-SUFFIX,muse.ai
+DOMAIN,hatch.metaaivm.com
+DOMAIN,graph.facebook.com
+DOMAIN,meta.graph.meta.com
+DOMAIN,hatch-api.meta.ai
+DOMAIN,api.meta.ai
+DOMAIN,www.multimango.com
+DOMAIN,www.facebook.com
