@@ -2,6 +2,8 @@
 # SOURCE: Captured from Chrome and the macOS Muse app via Surge
 # UPDATED: 2026-09-27
 DOMAIN-SUFFIX,muse.ai
+DOMAIN-SUFFIX,meta.com
+DOMAIN-KEYWORD,meta
 DOMAIN,hatch.metaaivm.com
 DOMAIN,graph.facebook.com
 DOMAIN,meta.graph.meta.com
