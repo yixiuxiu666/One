@@ -44,3 +44,7 @@ DOMAIN-SUFFIX,reports.trading212.com
 DOMAIN-SUFFIX,payments.trading212.com
 DOMAIN-SUFFIX,deposit.trading212.com
 DOMAIN-SUFFIX,withdraw.trading212.com
+
+DOMAIN,trading212equities.s3.eu-central-1.amazonaws.com
+DOMAIN,trading2129704.zendesk.com
+
