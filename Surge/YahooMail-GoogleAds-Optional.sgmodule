@@ -1,0 +1,12 @@
+#!name=Yahoo Mail 广告补充（Google，全设备生效）
+#!desc=可选：拦截本次抓包中出现的 Google 广告主机。会影响其他 App 使用这些主机的广告及广告跳转；与 Yahoo Mail 主模块分别启用。不需要 MITM。
+# Version: 1.0.0 / 2026-11-09
+# These requests were observed on the phone; attribution of every request
+# to Yahoo Mail has not been confirmed. Enable only if this scope is desired.
+# Domain blocking cannot be limited to Yahoo Mail on iOS.
+
+[Rule]
+DOMAIN,pubads.g.doubleclick-cn.net,REJECT
+DOMAIN,googleads.g.doubleclick-cn.net,REJECT
+DOMAIN,adx.g.doubleclick-cn.net,REJECT
+DOMAIN,pagead2.googlesyndication.com,REJECT
