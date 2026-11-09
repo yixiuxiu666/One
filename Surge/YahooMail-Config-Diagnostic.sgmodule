@@ -1,0 +1,9 @@
+#!name=Yahoo Mail 启动配置诊断（临时）
+#!desc=仅追加 config.mobile.yahoo.com 到 MITM，供排查广告占位使用；不改写响应，不是去广告模块。抓包完成后关闭。
+# Version: 1.0.0 / 2026-11-09
+# Requires an installed and trusted personal Surge CA and MITM enabled.
+# This exposes HTTPS configuration traffic to the local Surge capture.
+# No mailbox/login hosts, external scripts, routing rules, or response edits.
+
+[MITM]
+hostname = %APPEND% config.mobile.yahoo.com
