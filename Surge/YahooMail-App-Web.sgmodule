@@ -1,0 +1,26 @@
+#!name=Yahoo Mail 去广告（App＋网页共用）
+#!desc=合并手机三合一与电脑版网页去广告。自动从 GitHub 下载网页脚本；开启 Rewrite、Scripting、MITM 并信任各设备个人 CA。Google 域名规则全设备生效。启用后关闭旧三合一及独立网页模块。
+# Version: 3.0.1 / 2026-11-10
+# Requires Surge iOS 5.14+ / macOS 5.9+ for jq body rewrite.
+# Preserve the previously verified App rules and desktop web script.
+# Web script is fetched from the user's GitHub repository.
+# No local JS file or device-specific absolute path is required.
+# Web rule targets /n/ HTML only. Mobile browser behavior is not verified.
+# Main-site HTTPS is decrypted locally on mail.yahoo.com for web rewriting.
+# Cached App configuration may persist until the next config fetch.
+
+[Body Rewrite]
+http-response-jq ^https://config\.mobile\.yahoo\.com/V3/getconfig(?:\?|$) 'if type == "object" and .doctype == "YMConfig" and (.feature["com.yahoo.MailSDK.domain"] | type) == "object" then .feature["com.yahoo.MailSDK.domain"] |= with_entries(if (.key as $k | ["adPlaceholderView","mailTineAds","topPencilAd","secondPencilAd","topPencilAdUsingTaboolaApi","secondPencilAdUsingTaboolaApi","mobileLeaderboard","infiniteMobileLeaderboard","infiniteMobileLeaderboardInMailTine","infiniteMobileLeaderboardOnIpad","nativeAdsEnabled","geminiAdsInAllFoldersEnabled","smAdManagerEnabled","sponsored_moments_ad_enabled","enableGraphicalAdsPrefetch","mobileLeaderboardPrefetch"] | index($k)) != null then .value |= walk(if type == "number" then 0 else . end) else . end) else . end'
+http-response-jq ^https://api\.taboola\.com/2\.0/json/yahoo-ios-mail/recommendations\.get(?:\?|$) 'if type == "object" then (if (.placements | type) == "array" then .placements |= map(if type == "object" then (if (.list | type) == "array" then (.list |= map(select(if type == "object" then ((.origin // "" | tostring | ascii_upcase) != "SPONSORED") else true end))) | select(.list | length > 0) else . end) else . end) else . end) else . end'
+
+[Rule]
+DOMAIN,pubads.g.doubleclick-cn.net,REJECT
+DOMAIN,googleads.g.doubleclick-cn.net,REJECT
+DOMAIN,adx.g.doubleclick-cn.net,REJECT
+DOMAIN,pagead2.googlesyndication.com,REJECT
+
+[Script]
+YahooMail-Web-Ads = type=http-response,pattern=^https://mail\.yahoo\.com/n/(?:[^?]*)(?:\?.*)?$,requires-body=true,max-size=5242880,timeout=10,script-path=https://raw.githubusercontent.com/yixiuxiu666/One/main/Surge/YahooMail-Web-Ads.js
+
+[MITM]
+hostname = %APPEND% config.mobile.yahoo.com, api.taboola.com, mail.yahoo.com
