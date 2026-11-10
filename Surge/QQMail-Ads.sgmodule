@@ -1,0 +1,16 @@
+#!name=QQ邮箱去广告
+#!desc=基于 QQ邮箱 iOS 7.2.0 抓包，仅清空已确认的两个广点通广告位列表。需开启 Rewrite、MITM 并信任 Surge 证书；广告留白效果待实机确认。单文件，无外部脚本。
+# Version: 1.1.0 / 2026-11-10
+# Requires Surge iOS 5.14+ / macOS 5.9+ for jq body rewrite.
+# Captured: ii.gdt.qq.com/gdt_inner_view, hostappid 1109765220,
+# c_pkgname com.tencent.qqmail, posid 8068962949641051 / 2020181067861747.
+# Only the two observed slot lists are cleared. Preserve status codes, interval,
+# other response metadata and other slots. No mailbox API is modified.
+# No domain-wide blocking of gdt.qq.com, qq.com or qqmail.com.
+
+[Body Rewrite]
+http-response-jq ^https://ii\.gdt\.qq\.com/gdt_inner_view\?(?:[^#]*&)?posid=8068962949641051(?:&|$) 'if type == "object" then (if (.data | type) == "object" then (if (.data["8068962949641051"] | type) == "object" then (if (.data["8068962949641051"].list | type) == "array" then .data["8068962949641051"].list = [] else . end) else . end) else . end) else . end'
+http-response-jq ^https://ii\.gdt\.qq\.com/gdt_inner_view\?(?:[^#]*&)?posid=2020181067861747(?:&|$) 'if type == "object" then (if (.data | type) == "object" then (if (.data["2020181067861747"] | type) == "object" then (if (.data["2020181067861747"].list | type) == "array" then .data["2020181067861747"].list = [] else . end) else . end) else . end) else . end'
+
+[MITM]
+hostname = %APPEND% ii.gdt.qq.com
