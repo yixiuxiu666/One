@@ -1,0 +1,8 @@
+# Yahoo Mail 原 Surge 合并版的 Google 广告域名规则
+# Version: 1.0.0 / 2026-11-10
+# 添加至 Quantumult X「分流」资源，保留资源自带 reject 策略。
+# 这些域名拦截对通过 Quantumult X 的所有 App 生效。
+host, pubads.g.doubleclick-cn.net, reject
+host, googleads.g.doubleclick-cn.net, reject
+host, adx.g.doubleclick-cn.net, reject
+host, pagead2.googlesyndication.com, reject
