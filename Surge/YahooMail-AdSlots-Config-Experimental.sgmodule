@@ -1,0 +1,13 @@
+#!name=Yahoo Mail 广告位配置关闭（试验）
+#!desc=基于实抓启动配置关闭邮件列表广告、横幅和广告占位开关。需 Rewrite、MITM 和已信任的个人 CA。界面效果待实机验证；不会修改订阅资格。可与现有 Taboola/Google 过滤模块同时启用。
+# Version: 2.0.0-experimental / 2026-11-10
+# Captured Yahoo Mail 26.39.0 configuration: YMConfig, /V3/getconfig.
+# Only existing, explicitly listed MailSDK ad switches are changed.
+# Version selectors and unrelated configuration remain intact.
+# No external scripts. No mail/login/subscription response modifications.
+
+[Body Rewrite]
+http-response-jq ^https://config\.mobile\.yahoo\.com/V3/getconfig(?:\?|$) 'if type == "object" and .doctype == "YMConfig" and (.feature["com.yahoo.MailSDK.domain"] | type) == "object" then .feature["com.yahoo.MailSDK.domain"] |= with_entries(if (.key as $k | ["adPlaceholderView","mailTineAds","topPencilAd","secondPencilAd","topPencilAdUsingTaboolaApi","secondPencilAdUsingTaboolaApi","mobileLeaderboard","infiniteMobileLeaderboard","infiniteMobileLeaderboardInMailTine","infiniteMobileLeaderboardOnIpad","nativeAdsEnabled","geminiAdsInAllFoldersEnabled","smAdManagerEnabled","sponsored_moments_ad_enabled","enableGraphicalAdsPrefetch","mobileLeaderboardPrefetch"] | index($k)) != null then .value |= walk(if type == "number" then 0 else . end) else . end) else . end'
+
+[MITM]
+hostname = %APPEND% config.mobile.yahoo.com
