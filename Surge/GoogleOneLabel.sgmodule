@@ -1,0 +1,9 @@
+#!name=Google One AI 产品标识替换
+#!desc=替换 Google One AI 页面响应中的产品标识。
+#!version=1.0.1
+
+[Body Rewrite]
+http-response ^https://one[.]google[.]com/ai[?].*$ g1[.]ios[.]20tb[.]m[.]v2 g1.ai.ultra.1month_eft.acq
+
+[MITM]
+hostname = %APPEND% one.google.com
