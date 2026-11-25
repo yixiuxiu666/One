@@ -1,0 +1,9 @@
+#!name=750157 - Google One AI 产品标识替换
+#!desc=替换 Google One AI 页面响应中的产品标识。
+#!version=1.0.0
+
+[Body Rewrite]
+http-response ^https://one[.]google[.]com/ai[?].*$ g1[.]ios[.]30tb[.]ai[.]pro[.]m g1.ai.ultra.3months_ip_90p.acq
+
+[MITM]
+hostname = %APPEND% one.google.com
